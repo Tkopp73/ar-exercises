@@ -10,6 +10,7 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
-userStore = gets.chomp
-
-Store.create(name: userStore)
+user_store_name = gets.chomp
+puts Store.count
+user_store = Store.create(name: user_store_name)
+puts user_store.errors.full_messages
